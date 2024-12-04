@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class BattleshipGame {
 	
-	/* 3. Millora el joc dels vaixells que vas fer en la tasca7: Utilitza 5 files i 5 columnes  i amaga 2 vaixells. 
-	 * També cal que vagis mostrant les caselles on hi ha aigua després de cada jugada. El joc s'acaba quan s'han trobat els 2 vaixells */
+	/* 3. Mejora el juego de los barcos que hiciste en la tarea7: Usa 5 filas y 5 columnas y esconde 2 barcos. 
+	 * También es necesario que vayas mostrando las casillas donde hay agua después de cada jugada. El juego termina cuando se han encontrado los 2 barcos */
 
     public static void main(String[] args) {
     	
@@ -47,7 +47,7 @@ public class BattleshipGame {
     	
     	while(vaixellsTrobats != 2) {
     		do {
-        		System.out.print("\n\tIntrodueix la posició que creus que hi ha vaixell EX.(A2), Intents " + jugades + ": ");
+        		System.out.print("\n\tIntroduce la posición que crees que hay barco EJ.(A2), Intentos " + jugades + ": ");
         		cordenades = scan.next();
         		
         		columnaJugador = cordenades.charAt(0);
@@ -75,7 +75,7 @@ public class BattleshipGame {
         				columnaOk = true;
         				break;
         			default:
-        				System.err.println("\n\tLletra incorrecta!!!");
+        				System.err.println("\n\tLetra incorrecta!!!");
         				columnaOk = false;
         				break;
         		}
@@ -102,7 +102,7 @@ public class BattleshipGame {
     				filaOk = true;
     				break;
     			default:
-    				System.err.println("\n\tNumero incorrecte!!!");
+    				System.err.println("\n\tNumero incorrecto!!!");
     				filaOk = false;
     				break;
         		}
@@ -114,7 +114,7 @@ public class BattleshipGame {
     			matriu[filaJugadorInt][columnaJugadorInt] = 'V';
     			
     			System.out.print("\n\t *********************");
-    			System.out.println("\n\t | VAIXELL ENFONSAT! |");
+    			System.out.println("\n\t | BARCO HUNDIDO! |");
     			System.out.print("\t *********************\n");
     			
     			vaixellsTrobats++;
@@ -124,7 +124,7 @@ public class BattleshipGame {
     			matriu[filaJugadorInt][columnaJugadorInt] = 'A';
     			
     			System.out.print("\n\t *********************");
-    			System.out.println("\n\t |       AIGUA!      |");
+    			System.out.println("\n\t |       AGUA!      |");
     			System.out.print("\t *********************\n");
     			
     			jugades++;
@@ -144,8 +144,8 @@ public class BattleshipGame {
         	}	
     	}
     	
-    	System.out.println("\n\tEnhorabona has GUANYAT!!");
-    	System.out.println("\n\tNumero d'intents: " + jugades);
+    	System.out.println("\n\tEnhorabuena has GANADO!!");
+    	System.out.println("\n\tNumero de intentos: " + jugades);
     	
     }
 }
