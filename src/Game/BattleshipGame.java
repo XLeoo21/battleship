@@ -4,15 +4,15 @@ import java.util.Random;
 
 public class BattleshipGame {
 	
-	/* 3. Mejora el juego de los barcos que hiciste en la tarea7: Usa 5 filas y 5 columnas y esconde 2 barcos. 
-	 * También es necesario que vayas mostrando las casillas donde hay agua después de cada jugada. El juego termina cuando se han encontrado los 2 barcos */
+	/* 3. Improve the Battleship game you made in task7: Use 5 rows and 5 columns and hide 2 ships. 
+	 * It is also necessary to display the cells where there is water after each move. The game ends when the 2 ships have been found. */
 
     public static void main(String[] args) {
     	
     	Scanner scan = new Scanner(System.in);
     	Random random = new Random();
     	
-    	/// MATRIU
+    	/// MATRIX
     	char matriu[][] = {{' ', 'A', 'B', 'C', 'D', 'E'},
     					  {'1', '*', '*', '*', '*', '*'},
     					  {'2', '*', '*', '*', '*', '*'},
@@ -20,7 +20,7 @@ public class BattleshipGame {
     					  {'4', '*', '*', '*', '*', '*'},
     					  {'5', '*', '*', '*', '*', '*'}};
     	
-    	// VARIABLES RANDOM PER POSAR ELS VAIXELLS AL TAULER
+    	// RANDOM VARIABLES TO PLACE SHIPS ON THE BOARD
     	int filaConsola1 = random.nextInt(1,6), filaConsola2 = random.nextInt(1,6);
     	int columnaConsola1 = random.nextInt(1,6), columnaConsola2 = random.nextInt(1,6);
     	
@@ -32,7 +32,7 @@ public class BattleshipGame {
     	boolean filaOk = false;
     	boolean columnaOk = false;
     	
-    	// MOSTRAR EL TAULER DE JOC
+    	// DISPLAY THE GAME BOARD
     	System.out.println("");
     	for(int fila = 0; fila < matriu.length; fila++) {
     		System.out.print("\t");
@@ -47,7 +47,7 @@ public class BattleshipGame {
     	
     	while(vaixellsTrobats != 2) {
     		do {
-        		System.out.print("\n\tIntroduce la posición que crees que hay barco EJ.(A2), Intentos " + jugades + ": ");
+        		System.out.print("\n\tEnter the position where you think there's a ship (e.g., A2), Attempts " + jugades + ": ");
         		cordenades = scan.next();
         		
         		columnaJugador = cordenades.charAt(0);
@@ -75,7 +75,7 @@ public class BattleshipGame {
         				columnaOk = true;
         				break;
         			default:
-        				System.err.println("\n\tLetra incorrecta!!!");
+        				System.err.println("\n\tIncorrect letter!!!");
         				columnaOk = false;
         				break;
         		}
@@ -102,7 +102,7 @@ public class BattleshipGame {
     				filaOk = true;
     				break;
     			default:
-    				System.err.println("\n\tNumero incorrecto!!!");
+    				System.err.println("\n\tIncorrect number!!!");
     				filaOk = false;
     				break;
         		}
@@ -114,7 +114,7 @@ public class BattleshipGame {
     			matriu[filaJugadorInt][columnaJugadorInt] = 'V';
     			
     			System.out.print("\n\t *********************");
-    			System.out.println("\n\t | BARCO HUNDIDO! |");
+    			System.out.println("\n\t | SHIP SUNK!      |");
     			System.out.print("\t *********************\n");
     			
     			vaixellsTrobats++;
@@ -124,13 +124,13 @@ public class BattleshipGame {
     			matriu[filaJugadorInt][columnaJugadorInt] = 'A';
     			
     			System.out.print("\n\t *********************");
-    			System.out.println("\n\t |       AGUA!      |");
+    			System.out.println("\n\t |      WATER!     |");
     			System.out.print("\t *********************\n");
     			
     			jugades++;
     		}
     		
-    		// MOSTRAR EL TAULER DE JOC
+    		// DISPLAY THE GAME BOARD
         	System.out.println("");
         	for(int fila = 0; fila < matriu.length; fila++) {
         		System.out.print("\t");
@@ -144,8 +144,8 @@ public class BattleshipGame {
         	}	
     	}
     	
-    	System.out.println("\n\tEnhorabuena has GANADO!!");
-    	System.out.println("\n\tNumero de intentos: " + jugades);
+    	System.out.println("\n\tCongratulations, you WON!!");
+    	System.out.println("\n\tNumber of attempts: " + jugades);
     	
     }
 }
