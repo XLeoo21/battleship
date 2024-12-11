@@ -114,7 +114,7 @@ public class BattleshipGame {
     			matriu[filaJugadorInt][columnaJugadorInt] = 'V';
     			
     			System.out.print("\n\t *********************");
-    			System.out.println("\n\t | SHIP SUNK!      |");
+    			System.out.println("\n\t | VAIXELL!      |");
     			System.out.print("\t *********************\n");
     			
     			vaixellsTrobats++;
@@ -125,7 +125,7 @@ public class BattleshipGame {
     			matriu[filaJugadorInt][columnaJugadorInt] = 'A';
     			
     			System.out.print("\n\t *********************");
-    			System.out.println("\n\t |      WATER!     |");
+    			System.out.println("\n\t |      AIGUA!     |");
     			System.out.print("\t *********************\n");
     			
     			jugades++;
