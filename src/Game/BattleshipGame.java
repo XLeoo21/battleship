@@ -109,7 +109,7 @@ public class BattleshipGame {
         		
         	} while(!columnaOk || !filaOk);
     		
-    		
+    		// VAIXELL TROBAT
     		if(columnaConsola1 == columnaJugadorInt && filaConsola1 == filaJugadorInt || columnaConsola2 == columnaJugadorInt && filaConsola2 == filaJugadorInt) {
     			matriu[filaJugadorInt][columnaJugadorInt] = 'V';
     			
@@ -121,6 +121,7 @@ public class BattleshipGame {
     			jugades++;
     			
     		} else {
+			// AIGUA
     			matriu[filaJugadorInt][columnaJugadorInt] = 'A';
     			
     			System.out.print("\n\t *********************");
